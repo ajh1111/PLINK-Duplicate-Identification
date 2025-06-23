@@ -24,11 +24,12 @@ match_ids <- match(map$V2, BLAST$V2)
 matched <- !is.na(match_ids)
 map[matched, ] <- BLAST[match_ids[matched], ]
 
-#Set any chromosome numbers larger than 17 to 0
+#Remove header row, and set any chromosome numbers larger than 17 to 0
+map = map[-1, ]
+map$V1 <- as.numeric(as.character(map$V1))
 map[map$V1 > 17, c("V1", "V4")] <- 0
 
-#Remove header row and save .map file (with locations)
-map = map[-1, ]
+#Save .map file (with locations)
 write.table(map, "JD_PFR_PLINK.map", sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
 
 
