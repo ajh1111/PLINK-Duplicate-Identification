@@ -1,0 +1,23 @@
+PLINK v1.9.0-b.7.7 64-bit (22 Oct 2024)
+Options in effect:
+  --file JD_PFR_PLINK
+  --genome full
+  --mendel
+  --mendel-duos
+  --missing-genotype 0
+  --no-fid
+  --no-parents
+  --no-pheno
+  --no-sex
+
+Hostname: DESKTOP-CJT5HUM
+Working directory: C:\Users\curly\Desktop\Apple Genotyping\Methods\PLINK Duplicate Identification
+Start time: Mon Jun 23 18:04:29 2025
+
+Random number seed: 1750658670
+16072 MB RAM detected; reserving 8036 MB for main workspace.
+
+Error: Invalid chromosome code '1009' on line 13363 of .map file.
+(Use --allow-extra-chr to force it to be accepted.)
+
+End time: Mon Jun 23 18:04:30 2025
