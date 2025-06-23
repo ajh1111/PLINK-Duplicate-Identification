@@ -7,7 +7,7 @@ ped[[1]] <- sub("\\.CEL$", "", ped[[1]])
 
 #Remove triploids from .ped file
 ids_to_remove <- read.delim("TriploidSampleNames.txt", header = FALSE, stringsAsFactors = FALSE)
-ids_to_remove <- readLines(ids_to_remove$V1)
+ids_to_remove <- ids_to_remove$V1
 ped <- ped[!(ped$V1 %in% ids_to_remove), ]
 
 #Remove header row and save .ped file
