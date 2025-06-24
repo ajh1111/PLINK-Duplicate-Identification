@@ -41,8 +41,12 @@ rm(list=ls())
 #set working directory [must contain plink.exe and files for analysis]
 setwd("C:/Users/curly/Desktop/PLINK Matching")
 
-#run PLINK dup matching
-system("plink --file JD_PFR_PLINK --no-fid --no-parents --no-sex --no-pheno --missing-genotype 0 --genome full  --mendel --mendel-duos")
+#Create subset of SNPs in PLINK
+system("plink --file JD_PFR_PLINK --no-fid --no-parents --no-sex --no-pheno --missing-genotype 0 --geno 0.01 --maf 0.3 --indep 50 5 1.5")
+
+
+#Run PLINK dup matching
+system("plink --file JD_PFR_PLINK --no-fid --no-parents --no-sex --no-pheno --extract plink.prune.in --missing-genotype 0 --genome full")
 
 
 #Convert plink.genome to a tab-delimited file
@@ -50,7 +54,4 @@ genome <- read.table("plink.genome", header = TRUE, sep = "", stringsAsFactors =
 write.table(genome, "plink_tab_delimited1.txt", sep = "\t", row.names = FALSE, quote = FALSE)
 
 
-
-check <- readBED("Merged_Geno1.bed")
-write.csv(check, "check.csv")
 
