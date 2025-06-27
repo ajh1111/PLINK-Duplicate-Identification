@@ -8,7 +8,7 @@ library(dplyr)
 library(tidyr)
 
 #Set wd
-setwd("C:/Users/curly/Desktop/PLINK Matching/Inputs")
+setwd("C:/Users/curly/Desktop/Apple Genotyping/Methods/PLINK Duplicate Identification")
 
 #.ped file curation
 
@@ -55,7 +55,7 @@ write.table(map, "JD_PFR_PLINK.map", sep = "\t", row.names = FALSE, col.names = 
 rm(list=ls())
 
 #set working directory [must contain plink.exe and files for analysis]
-setwd("C:/Users/curly/Desktop/PLINK Matching/Inputs")
+setwd("C:/Users/curly/Desktop/Apple Genotyping/Methods/PLINK Duplicate Identification")
 
 #Run PLINK
 system("plink --file JD_PFR_PLINK --missing-genotype 0 --genome full")
