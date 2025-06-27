@@ -4,8 +4,4 @@
 .httr-oauth
 .DS_Store
 .quarto
-<<<<<<< HEAD
-/Inputs
-=======
-Inputs
->>>>>>> f8ef96e4bfc3f34ed1e62b9eb630c93d0496b297
+Inputs/
