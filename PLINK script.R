@@ -114,8 +114,8 @@ group_colors <- rainbow(length(unique(V(graph)$group)))
 V(graph)$color <- group_colors[V(graph)$group]
 
 #Plot and save as .png
-png(filename = "C:/Users/curly/Desktop/Apple Genotyping/Results/PLINK Duplicate Identification/PLINK Matched Samples.png", width = 1000, height = 1000, pointsize = 20)
-plot(graph, layout = layout_with_fr(graph), vertex.size = 3, vertex.label = NA, main = "PLINK Matched Samples")
+png(filename = "C:/Users/curly/Desktop/Apple Genotyping/Results/PLINK Duplicate Identification/PLINK Clonal Groups.png", width = 1000, height = 1000, pointsize = 20)
+plot(graph, layout = layout_with_fr(graph), vertex.size = 3, vertex.label = NA, main = "PLINK Clonal Groups")
 
 dev.off()
 
