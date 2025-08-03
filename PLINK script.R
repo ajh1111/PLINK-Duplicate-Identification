@@ -23,7 +23,7 @@ ids_to_remove <- read.delim("TriploidSampleNames.txt", header = FALSE, stringsAs
 ids_to_remove <- ids_to_remove$V1
 ped <- ped[!(ped$V1 %in% ids_to_remove), ]
 
-#Add empty rows for PLINK formatting
+#Add empty columns for PLINK formatting
 ped <- add_column(ped, Fa = 0, Mo = 0, Se = 0, Ph = 0, .before = "V2" )
 ped <- add_column(ped, Fid = 0, .before = "V1" )
 
