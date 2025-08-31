@@ -9,7 +9,7 @@ library(dplyr)
 library(tidyr)
 
 #Set wd
-setwd("C:/Users/curly/Desktop/Apple Genotyping/Methods/PLINK Duplicate Identification/Inputs")
+setwd("C:/Users/curly/Desktop/Apple Genotyping/Methods/Diploid Duplicate Identification/PLINK Duplicate Identification/Inputs")
 
 
 #.ped file curation
@@ -57,7 +57,7 @@ write.table(map, "JD_PFR_PLINK.map", sep = "\t", row.names = FALSE, col.names = 
 rm(list=ls())
 
 #set working directory [must contain plink.exe and files for analysis]
-setwd("C:/Users/curly/Desktop/Apple Genotyping/Methods/PLINK Duplicate Identification/Inputs")
+setwd("C:/Users/curly/Desktop/Apple Genotyping/Methods/Diploid Duplicate Identification/PLINK Duplicate Identification/Inputs")
 
 
 #Run PLINK
